@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="action_banco" model="ir.actions.act_window">
+        <field name="name">Banco</field>
+        <field name="res_model">banco</field>
+        <field name="view_mode">form</field>
+    </record>
+
+    <menuitem id="banco_root" name="Banco"/>
+    <menuitem id="sub_banco" name="Pagamento" parent="banco_root" action="action_banco"/>
+
+    <record id="banco_form" model="ir.ui.view">
+        <field name="name">banco.form</field>
+        <field name="model">banco</field>
+        <field name="arch" type="xml">
+            <form>
+<!--                <header>-->
+<!--                    <button name="butao" string="Transferir" type="object" class="btn-primary"-->
+<!--                            style="margin-left:30rem;"/>-->
+<!--                </header>-->
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="data"/>
+                        </group>
+                        <group>
+                            <button name="butao" string="Transferir" type="object" class="btn-primary"
+                            style="margin-left:30rem;"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Transferência">
+                            <group>
+                                <group>
+                                    <field name="diario"/>
+                                    <field name="cli"/>
+                                    <field name="remetente"/>
+                                </group>
+                                <group>
+                                    <field name="destinatario"/>
+                                    <field name="currency_id" invisible="1"/>
+                                    <field name="currency_valor"/>
+                                </group>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>
