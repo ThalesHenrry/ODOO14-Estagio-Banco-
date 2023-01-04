@@ -11,7 +11,9 @@
     'depends': ['base', 'account'],
     'data': [
         'views/banco_views.xml',
-        'security/ir.model.access.csv'
+        'security/ir.model.access.csv',
+        'wizard/banco_wizard_view.xml',
+        'views/inherit_banco_views.xml'
     ],
     'application': True,
     'installable': True

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF -8" ?>
 <odoo>
 
     <record id="action_banco" model="ir.actions.act_window">
@@ -22,7 +22,7 @@
                 <sheet>
                     <group>
                         <group>
-                            <field name="data"/>
+                            <field name="data" required="1"/>
                         </group>
                         <group>
                             <button name="butao" string="Transferir" type="object" class="btn-primary"
@@ -33,11 +33,14 @@
                         <page string="Transferência">
                             <group>
                                 <group>
+                                    <h1 style="margin-bottom:40px;">TRANSAÇÃO</h1>
+
                                     <field name="diario"/>
                                     <field name="cli"/>
                                     <field name="remetente"/>
                                 </group>
                                 <group>
+                                    <h6 style="margin-bottom:50px;">-</h6>
                                     <field name="destinatario"/>
                                     <field name="currency_id" invisible="1"/>
                                     <field name="currency_valor"/>
