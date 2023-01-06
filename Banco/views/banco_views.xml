@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF -8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
 
     <record id="action_banco" model="ir.actions.act_window">
@@ -7,7 +7,7 @@
         <field name="view_mode">form</field>
     </record>
 
-    <menuitem id="banco_root" name="Banco"/>
+    <menuitem id="banco_root" name="Banco" web_icon="banco,static/description/icon.png"/>
     <menuitem id="sub_banco" name="Pagamento" parent="banco_root" action="action_banco"/>
 
     <record id="banco_form" model="ir.ui.view">
@@ -41,6 +41,7 @@
                                 </group>
                                 <group>
                                     <h6 style="margin-bottom:50px;">-</h6>
+                                    <field name="diariod"/>
                                     <field name="destinatario"/>
                                     <field name="currency_id" invisible="1"/>
                                     <field name="currency_valor"/>

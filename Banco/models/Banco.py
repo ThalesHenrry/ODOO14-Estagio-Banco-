@@ -16,6 +16,8 @@ class Banco(models.Model):
     dest = fields.Many2one('account.account', string="Conta partida")
     currency_valor = fields.Monetary(currency_field="currency_id", string="Montante")
     diario = fields.Many2one('account.journal', string="Diário")
+    diariod = fields.Many2one('account.journal', string="Diário")
+
 
     def butao(self):
         vals_list = {'name': '/',
@@ -47,7 +49,7 @@ class Banco(models.Model):
                       'partner_id': self.cli.id,
                       'destination_account_id': 25,
                       'is_internal_transfer': False,
-                      'journal_id': self.diario.id,
+                      'journal_id': self.diariod.id,
                       'payment_method_id': 1,
                       'payment_token_id': False,
                       'partner_bank_id': self.destinatario.id,

@@ -8,9 +8,9 @@
             <field name="inherit_id" ref="project_requests.project_request_view_form"/>
             <field name="arch" type="xml">
                 <xpath expr="//notebook" position="inside">
-                    <page string="Inf. Transação">
+                    <page string="Inf. Transação" attrs="{'invisible':[('id', '=', False)]}">
                         <group>
-                            <field name='tr' string="Transação"/>
+                            <field name='tr' string="Transação" />
                         </group>
                     </page>
                 </xpath>
@@ -24,7 +24,7 @@
             <field name="inherit_id" ref="account.view_account_payment_form"/>
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='move_id']" position="after">
-                    <field name="rt"/>
+                    <field name="rt" string="Gerproc" attrs="{'invisible':[('id', '=', False)]}"/>
                 </xpath>
             </field>
         </record>
