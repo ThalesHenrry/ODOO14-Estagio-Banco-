@@ -17,5 +17,5 @@ class pagamento(models.Model):
     _inherit = "account.payment"
 
     rt = fields.Many2many("project_request")
-    rs = fields.Many2many(related="rt.tr")
-    ac = fields.Many2many(related="rt.department_views_ids")
+    # rs = fields.Many2many(related="rt.protocol")
+    # ac = fields.Many2many(related="rt.department_views_ids")

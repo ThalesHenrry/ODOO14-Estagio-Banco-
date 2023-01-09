@@ -10,15 +10,16 @@
     <menuitem id="banco_root" name="Banco" web_icon="banco,static/description/icon.png"/>
     <menuitem id="sub_banco" name="Pagamento" parent="banco_root" action="action_banco"/>
 
+
     <record id="banco_form" model="ir.ui.view">
         <field name="name">banco.form</field>
         <field name="model">banco</field>
         <field name="arch" type="xml">
             <form>
-<!--                <header>-->
-<!--                    <button name="butao" string="Transferir" type="object" class="btn-primary"-->
-<!--                            style="margin-left:30rem;"/>-->
-<!--                </header>-->
+                <!--                <header>-->
+                <!--                    <button name="butao" string="Transferir" type="object" class="btn-primary"-->
+                <!--                            style="margin-left:30rem;"/>-->
+                <!--                </header>-->
                 <sheet>
                     <group>
                         <group>
@@ -26,7 +27,7 @@
                         </group>
                         <group>
                             <button name="butao" string="Transferir" type="object" class="btn-primary"
-                            style="margin-left:30rem;"/>
+                                    style="margin-left:30rem;"/>
                         </group>
                     </group>
                     <notebook>
@@ -34,7 +35,6 @@
                             <group>
                                 <group>
                                     <h1 style="margin-bottom:40px;">TRANSAÇÃO</h1>
-
                                     <field name="diario"/>
                                     <field name="cli"/>
                                     <field name="remetente"/>

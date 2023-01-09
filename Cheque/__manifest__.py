@@ -1,5 +1,5 @@
 {
-    'name': 'Banco',
+    'name': 'Cheque',
     'version': '14.0.0.0',
     'sumary': 'Modulo para pagamentos',
     'sequence': 1,
@@ -10,11 +10,8 @@
     'author': 'Thales Gregorio',
     'depends': ['base', 'account'],
     'data': [
-        'views/banco_views.xml',
         'security/ir.model.access.csv',
-        'wizard/banco_wizard_view.xml',
-        'views/inherit_banco_views.xml',
-        # 'views/cheque_views.xml'
+        'views/cheque_views.xml'
     ],
     'application': True,
     'installable': True

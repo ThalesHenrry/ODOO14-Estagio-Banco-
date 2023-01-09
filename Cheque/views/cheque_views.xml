@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+
+    <record id="action_cheque" model="ir.actions.act_window">
+        <field name="name">Cheque</field>
+        <field name="res_model">cheque</field>
+        <field name="view_mode">form</field>
+    </record>
+
+    <menuitem id="cheque_root" name="Cheque"/>
+    <menuitem id="sub_cheque" name="Cheque" parent="cheque_root" action="action_cheque"/>
+
+    <record id="cheque_form" model="ir.ui.view">
+        <field name="name">cheque.form</field>
+        <field name="model">cheque</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <h1 style="margin-bottom:50px;">PAGAMENTOS EM CHEQUE</h1>
+                            <field name="num_c"/>
+                            <field name="cod_b"/>
+                            <field name="ag"/>
+                            <field name="valor"/>
+                            <field name="valor_e"/>
+                        </group>
+                        <group>
+                            <h6 style="margin-bottom:100px;">-</h6>
+                            <field name="data"/>
+                            <field name="tipo_c"/>
+                            <field name="dest"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+</odoo>
