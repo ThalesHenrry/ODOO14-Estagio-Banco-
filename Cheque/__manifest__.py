@@ -11,7 +11,9 @@
     'depends': ['base', 'account'],
     'data': [
         'security/ir.model.access.csv',
-        'views/cheque_views.xml'
+        'views/cheque_views.xml',
+        'views/cheque_views.xml',
+        'Data/bank_cheque.xml'
     ],
     'application': True,
     'installable': True

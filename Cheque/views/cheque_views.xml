@@ -5,7 +5,7 @@
     <record id="action_cheque" model="ir.actions.act_window">
         <field name="name">Cheque</field>
         <field name="res_model">cheque</field>
-        <field name="view_mode">form</field>
+        <field name="view_mode">tree,form</field>
     </record>
 
     <menuitem id="cheque_root" name="Cheque"/>
@@ -17,24 +17,58 @@
         <field name="arch" type="xml">
             <form>
                 <sheet>
+                    <header>
+                        <button name="Botao" string="Descontar" type="object" class="btn-primary"/>
+                    </header>
                     <group>
                         <group>
                             <h1 style="margin-bottom:50px;">PAGAMENTOS EM CHEQUE</h1>
+                            <field name="ter" widget="radio"/>
+                            <field name="nome"
+                                   attrs="{'invisible':[
+                                   ('ter', '!=', 'sim')]}"/>
+                            <field name="cpf"
+                                   attrs="{'invisible':[
+                                   ('ter', '!=', 'sim')]}"/>
+                            <field name="tel"
+                                   attrs="{'invisible':[
+                                   ('ter', '!=', 'sim')]}"/>
+                        </group>
+                        <group>
+                            <h6 style="margin-bottom:105px;">-</h6>
                             <field name="num_c"/>
                             <field name="cod_b"/>
                             <field name="ag"/>
-                            <field name="valor"/>
-                            <field name="valor_e"/>
+                            <field name="bank_cheque"/>
+                            <field name="account_cheque"/>
                         </group>
                         <group>
-                            <h6 style="margin-bottom:100px;">-</h6>
+                            <h6 style="margin-bottom:30px;">-</h6>
+                            <field name="valor"/>
+                            <field name="valor_e"/>
                             <field name="data"/>
                             <field name="tipo_c"/>
-                            <field name="dest"/>
+                        </group>
+                        <group>
+                            <field name="cli" invisible="1"/>
                         </group>
                     </group>
                 </sheet>
             </form>
+        </field>
+    </record>
+
+    <record id="cheque_list" model="ir.ui.view">
+        <field name="name">cheque.list</field>
+        <field name="model">cheque</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="data"/>
+                <field name="cli"/>
+                <field name="tipo_c"/>
+                <field name="num_c"/>
+                <field name="valor"/>
+            </tree>
         </field>
     </record>
 
