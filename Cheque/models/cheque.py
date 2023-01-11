@@ -68,6 +68,7 @@ class Cheque(models.Model):
 
     def Botao(self):
         for rec in self:
+
             vals_list = {'name': '/',
                          'payment_type': 'outbound',
                          'partner_type': 'customer',
@@ -114,10 +115,8 @@ class Cheque(models.Model):
                           'activity_ids': [],
                           'message_ids': []}
 
-            pag1 = self.env['account.payment'].create(vals_list)
-            pag2 = self.env['account.payment'].create(vals_list2)
-            pag1.action_post()
-            pag2.action_post()
 
-#
-#     return self.env['ir.actions.act_window']._for_xml_id('Banco.banco_wizard_action')
+            self.env['account.payment'].create(vals_list)
+            self.env['account.payment'].create(vals_list2)
+
+        return self.env['ir.actions.act_window']._for_xml_id('Cheque.cheque_wizard_action')

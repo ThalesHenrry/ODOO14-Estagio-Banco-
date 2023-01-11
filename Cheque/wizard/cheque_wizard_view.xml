@@ -2,27 +2,27 @@
 <odoo>
     <data>
 
-        <record id="banco_wizard_form_view" model="ir.ui.view">
-            <field name="name">banco.wizard.form.view</field>
-            <field name="model">banco.wizard</field>
+        <record id="cheque_wizard_form_view" model="ir.ui.view">
+            <field name="name">cheque.wizard.form.view</field>
+            <field name="model">cheque.wizard</field>
             <field name="arch" type="xml">
                 <form>
                     <group>
                         <group>
-                            <h1>DESEJA POSTAR ESSE PAGAMENTO?</h1>
+                            <h1>DESEJA POSTAR ESSE CHEQUE?</h1>
                         </group>
                     </group>
                     <footer>
-                        <button name="butao" string="Postar" type="object" class="btn-primary"/>
+                        <button name="Botao" string="Postar" type="object" class="btn-primary"/>
                         <button string="Cancel" special="cancel" class="btn btn-secondary"/>
                     </footer>
                 </form>
             </field>
         </record>
 
-        <record id="banco_wizard_action" model="ir.actions.act_window">
-            <field name="name">Banco Wizard</field>
-            <field name="res_model">banco.wizard</field>
+        <record id="cheque_wizard_action" model="ir.actions.act_window">
+            <field name="name">Cheque Wizard</field>
+            <field name="res_model">cheque.wizard</field>
             <field name="view_mode">form</field>
             <field name="target">new</field>
         </record>

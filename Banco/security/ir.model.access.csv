@@ -1,3 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-banco_user,access.banco_user,model_banco,base.group_user,1,1,1,1
-banco_wizard_user,access.banco_wizard_user,model_banco_wizard,base.group_user,1,1,1,1
