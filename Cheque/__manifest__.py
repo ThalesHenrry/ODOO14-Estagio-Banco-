@@ -12,9 +12,9 @@
     'data': [
         'security/ir.model.access.csv',
         'views/cheque_views.xml',
-        'views/cheque_views.xml',
         'Data/bank_cheque.xml',
-        'wizard/cheque_wizard_view.xml'
+        'wizard/cheque_wizard_view.xml',
+        'views/lote_view.xml'
     ],
     'application': True,
     'installable': True

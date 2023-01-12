@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+
+    <record id="action_lote" model="ir.actions.act_window">
+        <field name="name">Lote</field>
+        <field name="res_model">lote</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="sub_menu_lote" name="Lote" parent="Cheque.cheque_root" action="action_lote"/>
+
+    <record id="lote_form" model="ir.ui.view">
+        <field name="name">lote.form</field>
+        <field name="model">lote</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="campo_cheque"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+</odoo>

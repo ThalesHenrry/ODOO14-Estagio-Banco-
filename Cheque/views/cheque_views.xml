@@ -11,6 +11,8 @@
     <menuitem id="cheque_root" name="Cheque"/>
     <menuitem id="sub_cheque" name="Cheque" parent="cheque_root" action="action_cheque"/>
 
+
+
     <record id="cheque_form" model="ir.ui.view">
         <field name="name">cheque.form</field>
         <field name="model">cheque</field>

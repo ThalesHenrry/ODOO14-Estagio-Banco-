@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+<!--        <record id="classe_extend_form_view" model="ir.ui.view">-->
+<!--            <field name="name">classe.extend.form.view</field>-->
+<!--            <field name="model">project_request</field>-->
+<!--            <field name="inherit_id" ref="project_requests.project_request_view_form"/>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <xpath expr="//notebook" position="inside">-->
+<!--                    <page string="Inf. Transação" attrs="{'invisible':[('id', '=', False)]}">-->
+<!--                        <group>-->
+<!--                            <field name='tr' string="Transação"/>-->
+<!--                        </group>-->
+<!--                    </page>-->
+<!--                </xpath>-->
+<!--            </field>-->
+<!--        </record>-->
+
+
+<!--        <record id="grupo_extend_form_view" model="ir.ui.view">-->
+<!--            <field name="name">grupo.extend.form.view</field>-->
+<!--            <field name="model">account.payment</field>-->
+<!--            <field name="inherit_id" ref="account.view_account_payment_form"/>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <xpath expr="//field[@name='move_id']" position="after">-->
+<!--                    <field name="rt" string="Gerproc" attrs="{'invisible':[('id', '=', False)]}"/>-->
+<!--                </xpath>-->
+<!--            </field>-->
+<!--        </record>-->
+    </data>
+</odoo>
